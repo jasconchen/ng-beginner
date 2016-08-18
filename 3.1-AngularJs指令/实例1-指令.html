@@ -7,11 +7,14 @@
 	<link rel="stylesheet" href="">
 </head>
 <body>
-	<div ng-controller="HelloAngular">
-		<p>{{greeting.text}}, Angular!</p>
+
+	<div ng-init="firstname='zehui'">
+		<p>在输入框中尝试输入：</p>
+		<p>姓名：<input type="text" ng-model="firstname"></p>
+		<p>您输入的为：{{firstname}}</p>
 	</div>
 
+	
 	<script src="../src/lib/angular-1.3.0.js"></script>
-	<script src="helloworld.js"></script>
 </body>
 </html>

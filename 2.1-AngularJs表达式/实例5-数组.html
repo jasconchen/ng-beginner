@@ -7,11 +7,18 @@
 	<link rel="stylesheet" href="">
 </head>
 <body>
-	<div ng-controller="HelloAngular">
-		<p>{{greeting.text}}, Angular!</p>
-	</div>
 
+	<h1>AngularJS 实例</h1>
+	<p ng-init="points=[1,15,19,2,40]">
+		第三个值为 {{points[2]}}
+	</p>
+
+
+	<h1>使用 ng-bind 的相同实例</h1>
+	<p ng-init="points=[1,15,19,2,40]">
+		第三个值为 <span ng-bind="points[2]"></span>
+	</p>
+	
 	<script src="../src/lib/angular-1.3.0.js"></script>
-	<script src="helloworld.js"></script>
 </body>
 </html>

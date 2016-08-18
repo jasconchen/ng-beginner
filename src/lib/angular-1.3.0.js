@@ -247,7 +247,7 @@ var /** holds major version number for IE or NaN for real browsers */
 
 /**
  * IE 11 changed the format of the UserAgent string.
- * See http://msdn.microsoft.com/en-us/library/ms537503.aspx
+ * See http://msdn.microsoft.com/en-us/../src/library/ms537503.aspx
  */
 msie = int((/msie (\d+)/.exec(lowercase(navigator.userAgent)) || [])[1]);
 if (isNaN(msie)) {
@@ -3212,7 +3212,7 @@ HashMap.prototype = {
  * application has been bootstrapped. You can do this using the extra `injector()` added
  * to JQuery/jqLite elements. See {@link angular.element}.
  *
- * *This is fairly rare but could be the case if a third party library is injecting the
+ * *This is fairly rare but could be the case if a third party ../src/library is injecting the
  * markup.*
  *
  * In the following example a new block of HTML containing a `ng-controller`
@@ -9813,7 +9813,7 @@ function $LocationProvider(){
       // somewhere#anchor or http://example.com/somewhere
       if (LocationMode === LocationHashbangInHtml5Url) {
         // get the actual href attribute - see
-        // http://msdn.microsoft.com/en-us/library/ie/dd347148(v=vs.85).aspx
+        // http://msdn.microsoft.com/en-us/../src/library/ie/dd347148(v=vs.85).aspx
         var href = elm.attr('href') || elm.attr('xlink:href');
 
         if (href.indexOf('://') < 0) {         // Ignore absolute URLs
@@ -12629,7 +12629,7 @@ function $RootScopeProvider(){
        *
        * @description
        * `$apply()` is used to execute an expression in angular from outside of the angular
-       * framework. (For example from browser DOM events, setTimeout, XHR or third party libraries).
+       * framework. (For example from browser DOM events, setTimeout, XHR or third party ../src/libraries).
        * Because we are calling into the angular framework we need to perform proper scope life
        * cycle of {@link ng.$exceptionHandler exception handling},
        * {@link ng.$rootScope.Scope#$digest executing watches}.
@@ -13009,7 +13009,7 @@ var SCE_CONTEXTS = {
 // Helper functions follow.
 
 // Copied from:
-// http://docs.closure-library.googlecode.com/git/closure_goog_string_string.js.source.html#line962
+// http://docs.closure-../src/library.googlecode.com/git/closure_goog_string_string.js.source.html#line962
 // Prereq: s is a string.
 function escapeForRegexp(s) {
   return s.replace(/([-()\[\]{}+?*.$\^|,:#<!\\])/g, '\\$1').
@@ -13424,11 +13424,11 @@ function $SceDelegateProvider() {
  * bindings.  (HTML is just one example of a context where rendering user controlled input creates
  * security vulnerabilities.)
  *
- * For the case of HTML, you might use a library, either on the client side, or on the server side,
+ * For the case of HTML, you might use a ../src/library, either on the client side, or on the server side,
  * to sanitize unsafe HTML before binding to the value and rendering it in the document.
  *
  * How would you ensure that every place that used these types of bindings was bound to a value that
- * was sanitized by your library (or returned as safe for rendering by your server?)  How can you
+ * was sanitized by your ../src/library (or returned as safe for rendering by your server?)  How can you
  * ensure that you didn't accidentally delete the line that sanitized the value, or renamed some
  * properties/fields and forgot to update the binding to the sanitized value?
  *
@@ -13436,7 +13436,7 @@ function $SceDelegateProvider() {
  * determine that something explicitly says it's safe to use a value for binding in that
  * context.  You can then audit your code (a simple grep would do) to ensure that this is only done
  * for those values that you can easily tell are safe - because they were received from your server,
- * sanitized by your library, etc.  You can organize your codebase to help with this - perhaps
+ * sanitized by your ../src/library, etc.  You can organize your codebase to help with this - perhaps
  * allowing only the files in a specific directory to do this.  Ensuring that the internal API
  * exposed by that code doesn't markup arbitrary values as safe then becomes a more manageable task.
  *
@@ -13559,10 +13559,10 @@ function $SceDelegateProvider() {
  *      the value.)  Do make use of your platform's escaping mechanism as it might be good
  *      enough before coding your own.  e.g. Ruby has
  *      [Regexp.escape(str)](http://www.ruby-doc.org/core-2.0.0/Regexp.html#method-c-escape)
- *      and Python has [re.escape](http://docs.python.org/library/re.html#re.escape).
+ *      and Python has [re.escape](http://docs.python.org/../src/library/re.html#re.escape).
  *      Javascript lacks a similar built in function for escaping.  Take a look at Google
- *      Closure library's [goog.string.regExpEscape(s)](
- *      http://docs.closure-library.googlecode.com/git/closure_goog_string_string.js.source.html#line962).
+ *      Closure ../src/library's [goog.string.regExpEscape(s)](
+ *      http://docs.closure-../src/library.googlecode.com/git/closure_goog_string_string.js.source.html#line962).
  *
  * Refer {@link ng.$sceDelegateProvider $sceDelegateProvider} for an example.
  *
@@ -13695,7 +13695,7 @@ function $SceProvider() {
    *     This function should return the a value that is safe to use in the context specified by
    *     contextEnum or throw and exception otherwise.
    *
-   * NOTE: This contract deliberately does NOT state that values returned by trustAs() must be
+   * NOTE: This contract de../src/liberately does NOT state that values returned by trustAs() must be
    * opaque or wrapped in some holder object.  That happens to be an implementation detail.  For
    * instance, an implementation could maintain a registry of all trusted objects by context.  In
    * such a case, trustAs() would return the same object that was passed in.  getTrusted() would
@@ -14228,7 +14228,7 @@ function $TimeoutProvider() {
 }
 
 // NOTE:  The usage of window and document instead of $window and $document here is
-// deliberate.  This service depends on the specific behavior of anchor nodes created by the
+// de../src/liberate.  This service depends on the specific behavior of anchor nodes created by the
 // browser (resolving and parsing URLs) that is unlikely to be provided by mock objects and
 // cause us to break tests.  In addition, when the browser resolves a URL for XHR, it
 // doesn't know about mocked locations and resolves URLs to the real document - which is

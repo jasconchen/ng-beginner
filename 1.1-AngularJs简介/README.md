@@ -46,7 +46,7 @@ AngularJS 是以一个 JavaScript 文件形式发布的，可通过 `script` 标
 		<p>{{greeting.text}}, Angular!</p>
 	</div>
 
-	<script src="lib/angular-1.3.0.js"></script>
+	<script src="../src/lib/angular-1.3.0.js"></script>
 	<script src="helloworld.js"></script>
 </body>
 </html>
@@ -93,7 +93,7 @@ Hello, Angular!
 <body>
 	<p>我的第一个表达式：{{5 + 5}}</p>
 
-	<script src="lib/angular-1.3.0.js"></script>
+	<script src="../src/lib/angular-1.3.0.js"></script>
 </body>
 </html>
 ```
@@ -131,7 +131,7 @@ Hello, Angular!
 			<p>姓名：{{fullname.firstName + ' ' + fullname.lastName}}</p>
 		</div>
 		
-		<script src="lib/angular-1.3.0.js"></script>
+		<script src="../src/lib/angular-1.3.0.js"></script>
 		<script src="myApp.js"></script>
 	</body>
 </html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+		<link rel="stylesheet" href="">
+	</head>
+	<body>
+		<form name="myForm" ng-init="test='471303121@qq.com'">
+			Email:
+			<input type="email" name="myAddress" ng-model="test" required>
+			<h3>状态</h3>
+			<p>Valid: {{myForm.myAddress.$valid}} (如果输入的值是合法的则为 true)。</p>
+			<p>Dirty: {{myForm.myAddress.$dirty}} (如果值改变则为 true)。</p>
+			<p>Touched: {{myForm.myAddress.$touched}} (如果通过触屏点击则为 true)。</p>
+		</form>
+		<script src="../src/lib/angular.min.js"></script>
+		<script src="ng-model.js"></script>
+	</body>
+</html>

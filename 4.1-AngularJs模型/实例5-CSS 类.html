@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+		<link rel="stylesheet" href="">
+		<style type="text/css" media="screen">
+			input.ng-invalid {
+				background-color: lightblue;
+			}
+			input.ng-valid {
+				background-color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<form name="myForm">
+			输入你的名字：
+			<input type="text" name="myAddress" ng-model="text" required>
+		</form>
+		<script src="../src/lib/angular.min.js"></script>
+		<script src="ng-model.js"></script>
+	</body>
+</html>

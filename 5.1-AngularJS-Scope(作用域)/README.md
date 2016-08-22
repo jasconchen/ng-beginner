@@ -169,3 +169,55 @@ chenminhao
 
 所有的应用都有一个 $rootScope，它可以作用在 ng-app 指令包含的所有 HTML 元素中。
 $rootScope 可作用于整个应用中。是各个 controller 中 scope 的桥梁。用 rootscope 定义的值，可以在各个 controller 中使用。
+
+**实例4**
+
+***HTML***
+
+```
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<div ng-controller="myCtrl">
+		<h1>{{lastname}} 家族成员：</h1>
+
+		<ul>
+			<li ng-repeat="i in names">{{i}} {{lastname}}</li>
+		</ul>
+	</div>
+
+	<script src="../src/lib/angular.min.js"></script>
+	<script src="rootscope.js"></script>
+</body>
+</html>
+```
+
+***JavaScript***
+
+```
+angular.module('myApp', [])
+	.controller('myCtrl', myCtrlFunc);
+
+	myCtrlFunc.$injector = ['$scope', '$rootSocpe'];
+
+	function myCtrlFunc($scope,$rootScope){
+		$scope.names = ['Emil', 'Tobias', 'Linus'];
+		$rootScope.lastname = 'Refsnes'
+	}
+```
+
+***Result***
+
+```
+Refsnes 家族成员：
+
+Emil Refsnes
+Tobias Refsnes
+Linus Refsnes
+```

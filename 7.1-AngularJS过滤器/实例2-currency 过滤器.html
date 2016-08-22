@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+
+	<div ng-controller="costCtrl">
+		<input type="text" ng-model="quantity">
+		<input type="text" ng-model="price">
+		<p>总价 = {{(quantity * price) | currency }}</p>
+	</div>
+
+	<script src="../src/lib/angular.min.js"></script>
+	<script src="costController.js"></script>
+</body>
+</html>

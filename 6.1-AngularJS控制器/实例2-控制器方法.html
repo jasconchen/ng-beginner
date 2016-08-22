@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<div ng-controller="personCtrl">
+		姓：<input type="text" ng-model="firstname">
+		名：<input type="text" ng-model="lastname">
+		<br>
+		姓名：{{ fullname() }}
+	</div>
+
+	<script src="../src/lib/angular.min.js"></script>
+	<script src="ngController2.js"></script>
+</body>
+</html>

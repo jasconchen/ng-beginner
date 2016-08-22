@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+
+	<div ng-controller="namesCtrl">
+		<ul>
+			<li ng-repeat="i in names | orderBy:'country'">
+				{{i.name + ', ' + i.country}}
+			</li>
+		</ul>
+	</div>
+
+	<script src="../src/lib/angular.min.js"></script>
+	<script src="nameController.js"></script>
+</body>
+</html>

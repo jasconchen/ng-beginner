@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+		<link rel="stylesheet" href="">
+	</head>
+	<body>
+		<div ng-controller="myCtrl">
+			<p><input type="text" ng-model="num"> 的16进制是 <button ng-click="clickButton()">转换</button></p>
+			<p>{{hex}}</p>
+
+			<p>自定义服务，用于转换16进制数</p>
+		</div>
+		<script src="../src/lib/angular.min.js"></script>
+		<script src="hexafy-server.js"></script>
+		<script src="hexafy-ctrl.js"></script>
+	</body>
+</html>
+</html>

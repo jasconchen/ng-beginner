@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+		<link rel="stylesheet" href="">
+	</head>
+	<body>
+		<div ng-controller="myCtrl">
+			<p>选择网站:</p>
+			<select ng-model="selectedSite" ng-options="i.site for i in sites">
+			</select>
+
+			<h3>你选择的是:{{selectedSite.site}}</h3>
+			<h3>网址为:{{selectedSite.url}}</h3>
+		</div>
+		<script src="../src/lib/angular.min.js"></script>
+		<script src="ng_select_options.js"></script>
+	</body>
+</html>
+</html>

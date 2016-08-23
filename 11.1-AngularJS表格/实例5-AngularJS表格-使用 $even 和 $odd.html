@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+		<link rel="stylesheet" href="table.css">
+	</head>
+	<body>
+		<div ng-controller="customersCtrl">
+			<table>
+				<tr ng-repeat="i in names">
+					<td ng-if="$odd" style="background-color: #f1f1f1;">{{i.Name}}</td>
+					<td ng-if="$even">{{i.Name}}</td>
+					<td ng-if="$odd" style="background-color: #f1f1f1;">{{i.Country}}</td>
+					<td ng-if="$even">{{i.Country}}</td>
+				</tr>
+			</table>
+		</div>
+		<script src="../src/lib/angular.min.js"></script>
+		<script src="table.js"></script>
+	</body>
+</html>
+</html>

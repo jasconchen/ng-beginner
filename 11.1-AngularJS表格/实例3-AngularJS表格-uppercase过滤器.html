@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+		<link rel="stylesheet" href="table.css">
+	</head>
+	<body>
+		<div ng-controller="customersCtrl">
+			<h3>uppercase 过滤器将字符串格式化为大写：</h3>
+			<table>
+				<tr ng-repeat="i in names">
+					<td>{{i.Name}}</td>
+					<td>{{i.Country | uppercase:'Country'}}</td>
+				</tr>
+			</table>
+		</div>
+		<script src="../src/lib/angular.min.js"></script>
+		<script src="table.js"></script>
+	</body>
+</html>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+		<link rel="stylesheet" href="">
+	</head>
+	<body>
+		<div ng-controller="myCtrl">
+			<p>选择一辆车:</p>
+			<select ng-model="selectedCar" ng-options="j.brand for (i,j) in cars">
+			</select>
+
+			<h3>你选择的是:{{selectedCar.brand}}</h3>
+			<h3>型号为:{{selectedCar.model}}</h3>
+			<h3>颜色为:{{selectedCar.color}}</h3>
+		</div>
+		<script src="../src/lib/angular.min.js"></script>
+		<script src="ng_select_object2.js"></script>
+	</body>
+</html>
+</html>

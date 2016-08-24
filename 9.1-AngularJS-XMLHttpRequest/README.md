@@ -136,7 +136,7 @@ $http.get(url) 是用于读取服务器数据的函数。
 </html>
 ```
 
-***Javascript***
+***JavaScript***
 
 ```
 angular.module('myApp', [])

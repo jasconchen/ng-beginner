@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	
+	<div ng-controller="formCtrl">
+		<form>
+			<p>First Name:</p>
+			<input type="text" ng-model="user.firstname">
+			<p>Last Name:</p>
+			<input type="text" ng-model="user.lastname">
+			<p><button ng-click="reset()">RESET</button></p>
+		</form>
+
+		<p>form = {{user}}</p>
+		<p>master = {{master}}</p>
+	</div>	
+	
+	<script src="../src/lib/angular.min.js"></script>
+	<script src="formCtrl.js"></script>
+</body>
+</html>

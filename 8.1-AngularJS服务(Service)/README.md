@@ -35,7 +35,7 @@ AngularJS 内建了30 多个服务。
 </html>
 ```
 
-***Javascript***
+***JavaScript***
 
 ```
 angular.module('myApp', [])
@@ -94,7 +94,7 @@ AngularJS 会一直监控应用，处理事件变化， AngularJS 使用 **$loca
 </html>
 ```
 
-***Javascript***
+***JavaScript***
 
 ```
 angular.module('myApp', [])
@@ -158,7 +158,7 @@ AngularJS **$timeout** 服务对应了 JS **window.setTimeout** 函数。
 </html>
 ```
 
-***Javascript***
+***JavaScript***
 
 ```
 angular.module('myApp', [])
@@ -218,7 +218,7 @@ AngularJS **$interval** 服务对应了 JS **window.setInterval** 函数。
 </html>
 ```
 
-***Javascript***
+***JavaScript***
 
 ```
 angular.module('myApp', [])

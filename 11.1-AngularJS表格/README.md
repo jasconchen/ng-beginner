@@ -35,7 +35,7 @@
 </html>
 ```
 
-***Javascript***
+***JavaScript***
 
 ```
 angular.module('myApp', [])
@@ -122,7 +122,7 @@ table tr:nth-child(even) {
 }
 ```
 
-***Javascript***
+***JavaScript***
 
 ```
 angular.module('myApp', [])
@@ -209,7 +209,7 @@ table tr:nth-child(even) {
 }
 ```
 
-***Javascript***
+***JavaScript***
 
 ```
 angular.module('myApp', [])
@@ -299,7 +299,7 @@ table tr:nth-child(even) {
 }
 ```
 
-***Javascript***
+***JavaScript***
 
 ```
 angular.module('myApp', [])
@@ -380,7 +380,7 @@ table, th , td {
 }
 ```
 
-***Javascript***
+***JavaScript***
 
 ```
 angular.module('myApp', [])

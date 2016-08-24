@@ -16,7 +16,7 @@ AngularJS 是以一个 JavaScript 文件形式发布的，可通过 `script` 标
 <script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
 ```
 
-> ** 各个 angular.js 版本下载： https://github.com/angular/angular.js/releases **
+> 各个 angular.js 版本下载： https://github.com/angular/angular.js/releases
 
 ## 什么是 AngularJS？
 
@@ -154,7 +154,7 @@ angular.module('myApp', [])
 ```
 名：
 zeHui
- 姓：
+姓：
 chen
 姓名：zeHui chen
 ```

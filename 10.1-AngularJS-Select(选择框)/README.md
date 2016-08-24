@@ -31,7 +31,7 @@
 </html>
 ```
 
-***Javascript***
+***JavaScript***
 
 ```
 angular.module('myApp', [])
@@ -85,7 +85,7 @@ angular.module('myApp', [])
 </html>
 ```
 
-***Javascript***
+***JavaScript***
 
 ```
 angular.module('myApp', [])
@@ -153,7 +153,7 @@ ng-repeat 有局限性，选择的值是一个字符串:
 </html>
 ```
 
-***Javascript***
+***JavaScript***
 
 ```
 angular.module('myApp', [])
@@ -211,7 +211,7 @@ Taobao
 </html>
 ```
 
-***Javascript***
+***JavaScript***
 
 ```
 angular.module('myApp', [])
@@ -284,7 +284,7 @@ $scope.sites = {
 </html>
 ```
 
-***Javascript***
+***JavaScript***
 
 ```
 angular.module('myApp', [])
@@ -351,7 +351,7 @@ $scope.cars = {
 </html>
 ```
 
-***Javascript***
+***JavaScript***
 
 ```
 angular.module('myApp', [])

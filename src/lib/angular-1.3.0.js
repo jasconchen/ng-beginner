@@ -5125,7 +5125,7 @@ function $CacheFactoryProvider() {
  * <div ng-include=" 'templateId.html' "></div>
  * ```
  *
- * or get it via Javascript:
+ * or get it via JavaScript:
  * ```js
  * $templateCache.get('templateId.html')
  * ```
@@ -8491,7 +8491,7 @@ function createHttpBackend($browser, createXhr, $browserDefer, callbacks, rawDoc
     // - fetches local scripts via XHR and evals them
     // - adds and immediately removes script elements from the document
     var script = rawDocument.createElement('script'), callback = null;
-    script.type = "text/javascript";
+    script.type = "text/JavaScript";
     script.src = url;
     script.async = true;
 
@@ -13403,7 +13403,7 @@ function $SceDelegateProvider() {
  * As of version 1.2, Angular ships with SCE enabled by default.
  *
  * Note:  When enabled (the default), IE8 in quirks mode is not supported.  In this mode, IE8 allows
- * one to execute arbitrary javascript by the use of the expression() syntax.  Refer
+ * one to execute arbitrary JavaScript by the use of the expression() syntax.  Refer
  * <http://blogs.msdn.com/b/ie/archive/2008/10/16/ending-expressions.aspx> to learn more about them.
  * You can ensure your document is in standards mode and not quirks mode by adding `<!doctype html>`
  * to the top of your HTML document.
@@ -13560,7 +13560,7 @@ function $SceDelegateProvider() {
  *      enough before coding your own.  e.g. Ruby has
  *      [Regexp.escape(str)](http://www.ruby-doc.org/core-2.0.0/Regexp.html#method-c-escape)
  *      and Python has [re.escape](http://docs.python.org/../src/library/re.html#re.escape).
- *      Javascript lacks a similar built in function for escaping.  Take a look at Google
+ *      JavaScript lacks a similar built in function for escaping.  Take a look at Google
  *      Closure ../src/library's [goog.string.regExpEscape(s)](
  *      http://docs.closure-../src/library.googlecode.com/git/closure_goog_string_string.js.source.html#line962).
  *
@@ -13723,7 +13723,7 @@ function $SceProvider() {
   this.$get = ['$parse', '$sniffer', '$sceDelegate', function(
                 $parse,   $sniffer,   $sceDelegate) {
     // Prereq: Ensure that we're not running in IE8 quirks mode.  In that mode, IE allows
-    // the "expression(javascript expression)" syntax which is insecure.
+    // the "expression(JavaScript expression)" syntax which is insecure.
     if (enabled && $sniffer.msie && $sniffer.msieDocumentMode < 8) {
       throw $sceMinErr('iequirks',
         'Strict Contextual Escaping does not support Internet Explorer version < 9 in quirks ' +
@@ -14262,7 +14262,7 @@ var originUrl = urlResolve(window.location.href, true);
  * IE7 does not normalize the URL when assigned to an anchor node.  (Apparently, it does, if one
  * uses the inner HTML approach to assign the URL as part of an HTML snippet -
  * http://stackoverflow.com/a/472729)  However, setting img[src] does normalize the URL.
- * Unfortunately, setting img[src] to something like "javascript:foo" on IE throws an exception.
+ * Unfortunately, setting img[src] to something like "JavaScript:foo" on IE throws an exception.
  * Since the primary usage for normalizing URLs is to sanitize such URLs, we can't use that
  * method and IE < 8 is unsupported.
  *
@@ -14271,7 +14271,7 @@ var originUrl = urlResolve(window.location.href, true);
  *   http://www.aptana.com/reference/html/api/HTMLAnchorElement.html
  *   http://url.spec.whatwg.org/#urlutils
  *   https://github.com/angular/angular.js/pull/2902
- *   http://james.padolsey.com/javascript/parsing-urls-with-the-dom/
+ *   http://james.padolsey.com/JavaScript/parsing-urls-with-the-dom/
  *
  * @function
  * @param {string} url The URL to be parsed.
@@ -16217,13 +16217,13 @@ function FormController(element, attrs, $scope, $animate) {
  *
  * Since the role of forms in client-side Angular applications is different than in classical
  * roundtrip apps, it is desirable for the browser not to translate the form submission into a full
- * page reload that sends the data to the server. Instead some javascript logic should be triggered
+ * page reload that sends the data to the server. Instead some JavaScript logic should be triggered
  * to handle the form submission in an application-specific way.
  *
  * For this reason, Angular prevents the default action (form submission to the server) unless the
  * `<form>` element has an `action` attribute specified.
  *
- * You can use one of the following two ways to specify what javascript method should be called when
+ * You can use one of the following two ways to specify what JavaScript method should be called when
  * a form is submitted:
  *
  * - {@link ng.directive:ngSubmit ngSubmit} directive on the form element
@@ -20116,7 +20116,7 @@ forEach(
  * its parent scope using
  * [prototypal inheritance](https://github.com/angular/angular.js/wiki/The-Nuances-of-Scope-Prototypal-Inheritance).
  * An important implication of this is if `ngModel` is used within `ngIf` to bind to
- * a javascript primitive defined in the parent scope. In this case any modifications made to the
+ * a JavaScript primitive defined in the parent scope. In this case any modifications made to the
  * variable within the child scope will override (hide) the value in the parent scope.
  *
  * Also, `ngIf` recreates elements using their compiled state. An example of this behavior

@@ -4,7 +4,7 @@
 
 ## ng-model 指令
 
-- ng-model 指令可以将输入域的值与 AngularJS 创建的变量绑定。
+ng-model 指令可以将输入域的值与 AngularJS 创建的变量绑定。
 
 **实例1**
 
@@ -30,7 +30,7 @@
 </html>
 ```
 
-***Javascript***
+***JavaScript***
 
 ```
 angular.module('myApp', [])
@@ -75,7 +75,7 @@ chenzehui
 </html>
 ```
 
-***Javascript***
+***JavaScript***
 
 ```
 angular.module('myApp', [])

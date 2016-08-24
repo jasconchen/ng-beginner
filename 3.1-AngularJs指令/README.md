@@ -246,7 +246,7 @@ chenminhao from Denmark
 </html>
 ```
 
-***Javascript***
+***JavaScript***
 
 ```
 angular.module('myApp', [])

@@ -2673,7 +2673,7 @@ function publishExternalAPI(angular) {
  *          An approval from 2 Core members with history of modifying      *
  *                         this file is required.                          *
  *                                                                         *
- *  Does the change somehow allow for arbitrary javascript to be executed? *
+ *  Does the change somehow allow for arbitrary JavaScript to be executed? *
  *    Or allows for someone to change the prototype of built-in objects?   *
  *     Or gives undesired access to variables likes document or window?    *
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -6664,7 +6664,7 @@ function $CacheFactoryProvider() {
  * <div ng-include=" 'templateId.html' "></div>
  * ```
  *
- * or get it via Javascript:
+ * or get it via JavaScript:
  * ```js
  * $templateCache.get('templateId.html')
  * ```
@@ -6684,7 +6684,7 @@ function $TemplateCacheProvider() {
  *          An approval from 2 Core members with history of modifying      *
  *                         this file is required.                          *
  *                                                                         *
- *  Does the change somehow allow for arbitrary javascript to be executed? *
+ *  Does the change somehow allow for arbitrary JavaScript to be executed? *
  *    Or allows for someone to change the prototype of built-in objects?   *
  *     Or gives undesired access to variables likes document or window?    *
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -11047,7 +11047,7 @@ function $HttpProvider() {
      *
      * <div class="alert alert-warning">
      * **Note:** Angular does not make a copy of the `data` parameter before it is passed into the `transformRequest` pipeline.
-     * That means changes to the properties of `data` are not local to the transform function (since Javascript passes objects by reference).
+     * That means changes to the properties of `data` are not local to the transform function (since JavaScript passes objects by reference).
      * For example, when calling `$http.get(url, $scope.myObject)`, modifications to the object's properties in a transformRequest
      * function will be reflected on the scope and in any templates where the object is data-bound.
      * To prevent this, transform functions should have no side-effects.
@@ -12041,7 +12041,7 @@ function createHttpBackend($browser, createXhr, $browserDefer, callbacks, rawDoc
     // - fetches local scripts via XHR and evals them
     // - adds and immediately removes script elements from the document
     var script = rawDocument.createElement('script'), callback = null;
-    script.type = "text/javascript";
+    script.type = "text/JavaScript";
     script.src = url;
     script.async = true;
 
@@ -13609,7 +13609,7 @@ function $LocationProvider() {
 
     $location.$$state = $browser.state();
 
-    var IGNORE_URI_REGEXP = /^\s*(javascript|mailto):/i;
+    var IGNORE_URI_REGEXP = /^\s*(JavaScript|mailto):/i;
 
     function setBrowserUrlWithFallback(url, replace, state) {
       var oldUrl = $location.url();
@@ -13655,7 +13655,7 @@ function $LocationProvider() {
         absHref = urlResolve(absHref.animVal).href;
       }
 
-      // Ignore when url is started with javascript: or mailto:
+      // Ignore when url is started with JavaScript: or mailto:
       if (IGNORE_URI_REGEXP.test(absHref)) return;
 
       if (absHref && !elm.attr('target') && !event.isDefaultPrevented()) {
@@ -13936,7 +13936,7 @@ function $LogProvider() {
  *          An approval from 2 Core members with history of modifying      *
  *                         this file is required.                          *
  *                                                                         *
- *  Does the change somehow allow for arbitrary javascript to be executed? *
+ *  Does the change somehow allow for arbitrary JavaScript to be executed? *
  *    Or allows for someone to change the prototype of built-in objects?   *
  *     Or gives undesired access to variables likes document or window?    *
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -17001,7 +17001,7 @@ function $RootScopeProvider() {
        *   previous call to `watchExpression` are not equal (with the exception of the initial run,
        *   see below). Inequality is determined according to reference inequality,
        *   [strict comparison](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)
-       *    via the `!==` Javascript operator, unless `objectEquality == true`
+       *    via the `!==` JavaScript operator, unless `objectEquality == true`
        *   (see next point)
        * - When `objectEquality == true`, inequality of the `watchExpression` is determined
        *   according to the {@link angular.equals} function. To save the value of the object for
@@ -18183,7 +18183,7 @@ function $$SanitizeUriProvider() {
  *          An approval from 2 Core members with history of modifying      *
  *                         this file is required.                          *
  *                                                                         *
- *  Does the change somehow allow for arbitrary javascript to be executed? *
+ *  Does the change somehow allow for arbitrary JavaScript to be executed? *
  *    Or allows for someone to change the prototype of built-in objects?   *
  *     Or gives undesired access to variables likes document or window?    *
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -18597,7 +18597,7 @@ function $SceDelegateProvider() {
  * As of version 1.2, Angular ships with SCE enabled by default.
  *
  * Note:  When enabled (the default), IE<11 in quirks mode is not supported.  In this mode, IE<11 allow
- * one to execute arbitrary javascript by the use of the expression() syntax.  Refer
+ * one to execute arbitrary JavaScript by the use of the expression() syntax.  Refer
  * <http://blogs.msdn.com/b/ie/archive/2008/10/16/ending-expressions.aspx> to learn more about them.
  * You can ensure your document is in standards mode and not quirks mode by adding `<!doctype html>`
  * to the top of your HTML document.
@@ -18754,7 +18754,7 @@ function $SceDelegateProvider() {
  *      enough before coding your own.  E.g. Ruby has
  *      [Regexp.escape(str)](http://www.ruby-doc.org/core-2.0.0/Regexp.html#method-c-escape)
  *      and Python has [re.escape](http://docs.python.org/library/re.html#re.escape).
- *      Javascript lacks a similar built in function for escaping.  Take a look at Google
+ *      JavaScript lacks a similar built in function for escaping.  Take a look at Google
  *      Closure library's [goog.string.regExpEscape(s)](
  *      http://docs.closure-library.googlecode.com/git/closure_goog_string_string.js.source.html#line962).
  *
@@ -18916,7 +18916,7 @@ function $SceProvider() {
   this.$get = ['$parse', '$sceDelegate', function(
                 $parse,   $sceDelegate) {
     // Prereq: Ensure that we're not running in IE<11 quirks mode.  In that mode, IE < 11 allow
-    // the "expression(javascript expression)" syntax which is insecure.
+    // the "expression(JavaScript expression)" syntax which is insecure.
     if (enabled && msie < 8) {
       throw $sceMinErr('iequirks',
         'Strict Contextual Escaping does not support Internet Explorer version < 11 in quirks ' +
@@ -19690,7 +19690,7 @@ var originUrl = urlResolve(window.location.href);
  *   http://www.aptana.com/reference/html/api/HTMLAnchorElement.html
  *   http://url.spec.whatwg.org/#urlutils
  *   https://github.com/angular/angular.js/pull/2902
- *   http://james.padolsey.com/javascript/parsing-urls-with-the-dom/
+ *   http://james.padolsey.com/JavaScript/parsing-urls-with-the-dom/
  *
  * @kind function
  * @param {string} url The URL to be parsed.
@@ -22645,13 +22645,13 @@ function FormController(element, attrs, $scope, $animate, $interpolate) {
  *
  * Since the role of forms in client-side Angular applications is different than in classical
  * roundtrip apps, it is desirable for the browser not to translate the form submission into a full
- * page reload that sends the data to the server. Instead some javascript logic should be triggered
+ * page reload that sends the data to the server. Instead some JavaScript logic should be triggered
  * to handle the form submission in an application-specific way.
  *
  * For this reason, Angular prevents the default action (form submission to the server) unless the
  * `<form>` element has an `action` attribute specified.
  *
- * You can use one of the following two ways to specify what javascript method should be called when
+ * You can use one of the following two ways to specify what JavaScript method should be called when
  * a form is submitted:
  *
  * - {@link ng.directive:ngSubmit ngSubmit} directive on the form element
@@ -22846,7 +22846,7 @@ var ngFormDirective = formDirectiveFactory(true);
   ngModelMinErr: false,
 */
 
-// Regex code was initially obtained from SO prior to modification: https://stackoverflow.com/questions/3143070/javascript-regex-iso-datetime#answer-3143231
+// Regex code was initially obtained from SO prior to modification: https://stackoverflow.com/questions/3143070/JavaScript-regex-iso-datetime#answer-3143231
 var ISO_DATE_REGEXP = /^\d{4,}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d:[0-5]\d\.\d+(?:[+-][0-2]\d:[0-5]\d|Z)$/;
 // See valid URLs in RFC3987 (http://tools.ietf.org/html/rfc3987)
 // Note: We are being more lenient, because browsers are too.
@@ -26325,9 +26325,9 @@ forEach(
  * Note that when an element is removed using `ngIf` its scope is destroyed and a new scope
  * is created when the element is restored.  The scope created within `ngIf` inherits from
  * its parent scope using
- * [prototypal inheritance](https://github.com/angular/angular.js/wiki/Understanding-Scopes#javascript-prototypal-inheritance).
+ * [prototypal inheritance](https://github.com/angular/angular.js/wiki/Understanding-Scopes#JavaScript-prototypal-inheritance).
  * An important implication of this is if `ngModel` is used within `ngIf` to bind to
- * a javascript primitive defined in the parent scope. In this case any modifications made to the
+ * a JavaScript primitive defined in the parent scope. In this case any modifications made to the
  * variable within the child scope will override (hide) the value in the parent scope.
  *
  * Also, `ngIf` recreates elements using their compiled state. An example of this behavior

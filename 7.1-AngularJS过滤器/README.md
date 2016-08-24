@@ -51,7 +51,7 @@ AngularJS 过滤器可用于转换数据：
 </html>
 ```
 
-***Javascript***
+***JavaScript***
 
 ```
 angular.module('myApp', [])
@@ -111,7 +111,7 @@ currency 过滤器将数字格式化为货币格式：
 </html>
 ```
 
-***Javascript***
+***JavaScript***
 
 ```
 angular.module('myApp', [])
@@ -167,7 +167,7 @@ orderBy 过滤器根据表达式排列数组：
 </html>
 ```
 
-***Javascript***
+***JavaScript***
 
 ```
 angular.module('myApp', [])
@@ -228,7 +228,7 @@ Hege, Sweden
 </html>
 ```
 
-***Javascript***
+***JavaScript***
 
 ```
 angular.module('myApp', [])

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="mainApp">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>AngularJS依赖注入</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<h2>AngularJS 简单应用</h2>
+
+	<div ng-controller="CalcCtrl">
+		<p>输入一个数字：<input type="number" ng-model="number"></p>
+		<p><button ng-click="square()">X<sup>2</sup></button></p>
+		<p>结果：{{result}}</p>
+	</div>
+
+	<script src="../src/lib/angular.min.js"></script>
+	<script src="calc.js"></script>
+</body>
+</html>
